@@ -28,14 +28,6 @@ targetEntityType: node
 bundle: session
 mode: teaser
 content:
-  addthis:
-    label: hidden
-    type: string
-    weight: 100
-    region: content
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
   links:
     weight: 100
     region: content

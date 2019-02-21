@@ -44,7 +44,6 @@ third_party_settings:
         - field_session_max_age
         - field_session_reg_link
         - field_session_instructor
-        - field_session_room
       parent_name: ''
       weight: 4
       format_type: tab
@@ -75,6 +74,7 @@ third_party_settings:
       children:
         - field_session_location
         - field_session_plocation
+        - field_session_room
       parent_name: ''
       weight: 3
       format_type: tab
