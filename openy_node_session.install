@@ -242,10 +242,3 @@ function openy_node_session_update_8010() {
     'field.storage.node.field_session_instructor',
   ]);
 }
-
-/**
- * Update to get fields same as in OpenY.
- */
-function openy_node_session_update_8011() {
-  openy_node_session_update_8010();
-}

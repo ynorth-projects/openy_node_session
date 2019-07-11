@@ -35,6 +35,7 @@ third_party_settings:
   field_group:
     group_session_info:
       children:
+        - field_session_instructor
         - field_session_description
         - field_session_gender
         - field_session_online
@@ -43,7 +44,6 @@ third_party_settings:
         - field_session_min_age
         - field_session_max_age
         - field_session_reg_link
-        - field_session_instructor
       parent_name: ''
       weight: 4
       format_type: tab
