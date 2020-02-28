@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.node.session.field_activity_type
     - field.field.node.session.field_availability
+    - field.field.node.session.field_wait_list_availability
     - field.field.node.session.field_productid
     - field.field.node.session.field_session_class
     - field.field.node.session.field_session_description
@@ -42,6 +43,7 @@ third_party_settings:
         - field_session_online
         - field_session_ticket
         - field_availability
+        - field_wait_list_availability
         - field_session_min_age
         - field_session_max_age
         - field_session_reg_link
@@ -128,6 +130,13 @@ content:
   field_availability:
     type: number
     weight: 16
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_wait_list_availability:
+    type: number
+    weight: 17
     region: content
     settings:
       placeholder: ''
