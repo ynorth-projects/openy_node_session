@@ -32,7 +32,7 @@ content:
     type: list_default
     region: content
   field_session_time_override:
-    type: string_textfield
+    type: string
     weight: 2
     label: above
     region: content
