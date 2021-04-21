@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.field.node.session.field_activity_type
     - field.field.node.session.field_availability
-    - field.field.node.session.field_wait_list_availability
     - field.field.node.session.field_productid
     - field.field.node.session.field_session_class
     - field.field.node.session.field_session_description
@@ -23,7 +22,9 @@ dependencies:
     - field.field.node.session.field_session_room
     - field.field.node.session.field_session_ticket
     - field.field.node.session.field_session_time
+    - field.field.node.session.field_wait_list_availability
     - node.type.session
+#    - workflows.workflow.content_workflow
   module:
     - content_moderation
     - datetime_range
@@ -58,6 +59,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Session Info'
+      region: content
     group_membership:
       children:
         - field_session_in_mbrsh
@@ -74,6 +76,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Membership
+      region: content
     group_location:
       children:
         - field_session_location
@@ -89,6 +92,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Location
+      region: content
     group_time:
       children:
         - field_session_time
@@ -103,6 +107,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Time
+      region: content
 id: node.session.default
 targetEntityType: node
 bundle: session
@@ -134,13 +139,6 @@ content:
     settings:
       placeholder: ''
     third_party_settings: {  }
-  field_wait_list_availability:
-    type: number
-    weight: 17
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
   field_productid:
     type: number
     weight: 13
@@ -154,6 +152,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
@@ -198,6 +197,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
@@ -242,6 +242,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
@@ -280,6 +281,13 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     region: content
+  field_wait_list_availability:
+    type: number
+    weight: 17
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 2
@@ -349,6 +357,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     region: content
   unpublish_on:
@@ -357,4 +366,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden: {  }

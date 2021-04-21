@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.session.field_activity_type
+    - field.field.node.session.field_availability
+    - field.field.node.session.field_productid
     - field.field.node.session.field_session_class
     - field.field.node.session.field_session_description
     - field.field.node.session.field_session_exclusions
@@ -20,6 +23,7 @@ dependencies:
     - field.field.node.session.field_session_room
     - field.field.node.session.field_session_ticket
     - field.field.node.session.field_session_time
+    - field.field.node.session.field_wait_list_availability
     - node.type.session
   module:
     - user
@@ -28,10 +32,23 @@ targetEntityType: node
 bundle: session
 mode: teaser
 content:
+  addthis:
+    label: hidden
+    type: string
+    weight: 100
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_activity_type: true
+  field_availability: true
+  field_productid: true
   field_session_class: true
   field_session_description: true
   field_session_exclusions: true
@@ -49,4 +66,6 @@ hidden:
   field_session_room: true
   field_session_ticket: true
   field_session_time: true
+  field_wait_list_availability: true
   langcode: true
+  search_api_excerpt: true

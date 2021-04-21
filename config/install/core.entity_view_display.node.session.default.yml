@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.field.node.session.field_activity_type
     - field.field.node.session.field_availability
-    - field.field.node.session.field_wait_list_availability
     - field.field.node.session.field_productid
     - field.field.node.session.field_session_class
     - field.field.node.session.field_session_description
@@ -23,6 +22,7 @@ dependencies:
     - field.field.node.session.field_session_room
     - field.field.node.session.field_session_ticket
     - field.field.node.session.field_session_time
+    - field.field.node.session.field_wait_list_availability
     - node.type.session
   module:
     - datetime_range
@@ -53,15 +53,6 @@ content:
     region: content
   field_availability:
     weight: 118
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_wait_list_availability:
-    weight: 119
     label: above
     settings:
       thousand_separator: ''
@@ -233,6 +224,15 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
+  field_wait_list_availability:
+    weight: 119
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
   links:
     weight: 100
     settings: {  }
@@ -242,3 +242,4 @@ hidden:
   field_session_instructor: true
   field_session_room: true
   langcode: true
+  search_api_excerpt: true
