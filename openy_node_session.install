@@ -9,7 +9,7 @@
  * Update Session for rabbit hole, hiding pages from anonymous users.
  */
 function openy_node_session_update_8001() {
-  $config_dir = drupal_get_path('module', 'openy_node_session') . '/config/install/';
+  $config_dir = \Drupal::service('extension.list.module')->getPath('openy_node_session') . '/config/install/';
   // Import new configuration.
   $config_importer = \Drupal::service('openy_upgrade_tool.importer');
   $config_importer->setDirectory($config_dir);
@@ -36,7 +36,7 @@ function openy_node_session_update_8001() {
  * Update description for field.
  */
 function openy_node_session_update_8002() {
-  $config_dir = drupal_get_path('module', 'openy_node_session') . '/config/install/';
+  $config_dir = \Drupal::service('extension.list.module')->getPath('openy_node_session') . '/config/install/';
   // Update multiple configurations.
   $configs = [
     'field.field.node.session.field_session_class' => [
@@ -93,7 +93,7 @@ function openy_node_session_update_8002() {
  * Update description for fields.
  */
 function openy_node_session_update_8003() {
-  $config_dir = drupal_get_path('module', 'openy_node_session') . '/config/install/';
+  $config_dir = \Drupal::service('extension.list.module')->getPath('openy_node_session') . '/config/install/';
   // Update multiple configurations.
   $configs = [
     'field.field.paragraph.session_time.field_session_time_date' => [
@@ -117,7 +117,7 @@ function openy_node_session_update_8003() {
  * Update Open Y session node feature configs.
  */
 function openy_node_session_update_8004() {
-  $config_dir = drupal_get_path('module', 'openy_node_session') . '/config/install/';
+  $config_dir = \Drupal::service('extension.list.module')->getPath('openy_node_session') . '/config/install/';
   // Update multiple configurations.
   $configs = [
     'field.field.node.session.field_session_exclusions' => [
@@ -144,7 +144,7 @@ function openy_node_session_update_8006() {
  * Update feature configs after entity reference handler update and configs actualization.
  */
 function _openy_node_session_update_8007() {
-  $config_dir = drupal_get_path('module', 'openy_node_session') . '/config/install/';
+  $config_dir = \Drupal::service('extension.list.module')->getPath('openy_node_session') . '/config/install/';
   // Update multiple configurations.
   $configs = [
     'field.field.node.session.field_session_class' => [
@@ -173,7 +173,7 @@ function _openy_node_session_update_8007() {
  * Add room and instructor fields.
  */
 function _openy_node_session_update_8008() {
-  $config_dir = drupal_get_path('module', 'openy_node_session') . '/config/install/';
+  $config_dir = \Drupal::service('extension.list.module')->getPath('openy_node_session') . '/config/install/';
 
   // Add two new fields.
   $config_importer = \Drupal::service('openy_upgrade_tool.importer');
@@ -218,7 +218,7 @@ function openy_node_session_update_8009() {
  * Update to get fields from prgreg.
  */
 function openy_node_session_update_8010() {
-  $config_dir = drupal_get_path('module', 'openy_node_session') . '/config/install/';
+  $config_dir = \Drupal::service('extension.list.module')->getPath('openy_node_session') . '/config/install/';
 
   // Add two new fields.
   $config_importer = \Drupal::service('openy_upgrade_tool.importer');
@@ -247,7 +247,7 @@ function openy_node_session_update_8010() {
  * Add new field_activity_type.
  */
 function openy_node_session_update_8012() {
-  $config_dir = drupal_get_path('module', 'openy_node_session') . '/config/install/';
+  $config_dir = \Drupal::service('extension.list.module')->getPath('openy_node_session') . '/config/install/';
 
   // Add two new fields.
   $config_importer = \Drupal::service('openy_upgrade_tool.importer');
@@ -265,7 +265,7 @@ function openy_node_session_update_8012() {
  */
 function openy_node_session_update_8013() {
 
-  $config_dir = drupal_get_path('module', 'openy_node_session') . '/config/install/';
+  $config_dir = \Drupal::service('extension.list.module')->getPath('openy_node_session') . '/config/install/';
 
   $config_importer = \Drupal::service('openy_upgrade_tool.importer');
   $config_importer->setDirectory($config_dir);
@@ -298,7 +298,7 @@ function openy_node_session_update_8013() {
  */
 function openy_node_session_update_8014() {
 
-  $config_dir = drupal_get_path('module', 'openy_node_session') . '/config/install/';
+  $config_dir = \Drupal::service('extension.list.module')->getPath('openy_node_session') . '/config/install/';
 
   $config_importer = \Drupal::service('openy_upgrade_tool.importer');
   $config_importer->setDirectory($config_dir);
