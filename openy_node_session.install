@@ -326,3 +326,22 @@ function openy_node_session_update_8014() {
     }
   }
 }
+
+/**
+ * Add new fields for Min/Max Grade values.
+ */
+function openy_node_session_update_8015() {
+  $config_dir = \Drupal::service('extension.list.module')->getPath('openy_node_session') . '/config/install/';
+
+  // Add two new fields.
+  $config_importer = \Drupal::service('openy_upgrade_tool.importer');
+  $config_importer->setDirectory($config_dir);
+  $config_importer->importConfigs([
+    'field.field.node.session.field_session_max_grade',
+    'field.field.node.session.field_session_min_grade',
+    'field.storage.node.field_session_max_grade',
+    'field.storage.node.field_session_min_grade',
+    'core.entity_view_display.node.session.default',
+    'core.entity_form_display.node.session.default',
+  ]);
+}
