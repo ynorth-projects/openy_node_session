@@ -345,3 +345,18 @@ function openy_node_session_update_8015() {
     'core.entity_form_display.node.session.default',
   ]);
 }
+
+/**
+ * Update allowed values function for Min/Max Grade field storage.
+ */
+function openy_node_session_update_8016() {
+  $config_dir = \Drupal::service('extension.list.module')->getPath('openy_node_session') . '/config/install/';
+
+  // Add two new fields.
+  $config_importer = \Drupal::service('openy_upgrade_tool.importer');
+  $config_importer->setDirectory($config_dir);
+  $config_importer->importConfigs([
+    'field.storage.node.field_session_max_grade',
+    'field.storage.node.field_session_min_grade',
+  ]);
+}
