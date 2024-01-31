@@ -21,4 +21,4 @@ dependencies:
   - 'paragraphs:paragraphs'
   - 'rabbit_hole:rabbit_hole'
   - 'scheduler:scheduler'
-core_version_requirement: '^8.9 || ^9 || ^10'
+core_version_requirement: ^9.5 || ^10
